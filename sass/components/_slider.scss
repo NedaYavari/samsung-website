@@ -1,0 +1,136 @@
+.slider {
+  position: relative;
+  height: 90vh;
+  background-color: $color-black;
+
+  & svg {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include respond(phone-md) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &.previous-icon {
+      left: 1rem;
+    }
+    &.next-icon {
+      right: 1rem;
+    }
+  }
+
+  &-timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    position: absolute;
+    bottom: 5rem;
+
+    .slider-item {
+      width: 12%;
+      height: 100%;
+
+      @include respond(phone) {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .slider-line {
+        height: 0.3rem;
+        border-radius: 2rem;
+        background-color: rgb(140, 143, 144);
+        transition: 0.1s;
+        cursor: pointer;
+
+        @include respond(phone) {
+          height: 100%;
+        }
+
+        &--progress {
+          width: 0;
+          height: 100%;
+          background-color: black;
+          transition: 0.1s;
+
+          @include respond(phone) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  row-gap: 6rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include respond(phone) {
+    padding: 0 5rem;
+  }
+
+  &-caption {
+    margin-left: 10rem;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 3rem;
+      padding: 3rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &--heading {
+      font-size: 4.2rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+
+      @include respond(tab-land) {
+        font-size: 3.6rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 3.2rem;
+      }
+    }
+
+    &--text {
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+    }
+
+    &--button {
+      padding: 1rem 2rem;
+      background-color: $color-black;
+      color: $color-white;
+      border-radius: 2rem;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

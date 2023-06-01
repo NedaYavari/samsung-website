@@ -1,0 +1,22 @@
+// Abstracts
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+//Base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//Components
+@import "components/accordion";
+@import "components/card";
+@import "components/navigation";
+@import "components/search";
+@import "components/slider";
+@import "components/swiper";
+
+//Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sections";

@@ -1,0 +1,80 @@
+.heading {
+  font-size: 3.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  @include respond(tab-land) {
+    font-size: 3.6rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 3.2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(phone-md) {
+    font-size: 2rem;
+  }
+}
+
+.offers {
+  padding: 5rem 0;
+  padding-left: 15rem;
+
+  @include respond(tab-land) {
+    padding-left: 5rem;
+  }
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  &-heading {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+
+    @include respond(tab-land) {
+      font-size: 3.6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+
+  &-desc {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+      line-height: 2;
+    }
+  }
+
+  &-button {
+    padding: 1rem 2rem;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 3rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: 0.2s;
+    }
+  }
+}

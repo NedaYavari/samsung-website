@@ -1,0 +1,27 @@
+.image-fade {
+  animation: imgFade 0.5s ease-in-out;
+}
+
+.slide-left {
+  animation: slideLeft 0.5s 0.1s ease-in-out backwards;
+}
+
+@keyframes imgFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

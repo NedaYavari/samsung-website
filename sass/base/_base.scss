@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+    overflow-x: hidden;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-scr) {
+    font-size: 75%;
+  }
+}
+
+body {
+  position: relative;
+
+  @include respond(tab-land) {
+    padding: 2rem 3rem;
+    overflow-x: hidden;
+  }
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+a,
+a:link {
+  text-decoration: none;
+  color: $color-black;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: $color-black;
+  transition: 0.5s;
+}

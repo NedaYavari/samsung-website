@@ -1,0 +1,78 @@
+.section-hero {
+  height: 100vh;
+}
+
+.shopping,
+.feature {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 50%;
+}
+
+.shopping {
+  @include respond(phone) {
+    width: 100%;
+    padding-bottom: 55%;
+  }
+}
+
+.feature {
+  @include respond(tab-port) {
+    padding-bottom: 55%;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 65%;
+  }
+
+  @include respond(phone-md) {
+    padding-bottom: 85%;
+  }
+}
+
+.section-two,
+.section-four {
+  width: 100%;
+  padding-top: 4rem;
+  background-color: rgb(242, 239, 234);
+}
+
+.section-three {
+  padding-top: 4rem;
+}
+
+.section-four {
+  @include respond(tab-port) {
+    padding-bottom: 60%;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 80%;
+  }
+}
+
+.section-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4rem;
+  padding: 6rem 5rem;
+
+  @include respond(phone) {
+    padding: 6rem 2rem;
+  }
+}
+
+section {
+  padding: 0 5rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+}

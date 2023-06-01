@@ -1,0 +1,77 @@
+.accordion {
+  &-wrapper {
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid $color-black;
+    transform: rotate(180deg);
+    transition: 0.5s;
+
+    &.active {
+      background-color: $color-black;
+      transform: rotate(0);
+      transition: 0.5s;
+    }
+
+    path {
+      fill: $color-black;
+
+      &.active {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.4rem;
+  }
+
+  &-body {
+    max-height: 0;
+    margin-bottom: 2rem;
+    padding: 0 0;
+    overflow: hidden;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 0.3s;
+
+    &.active {
+      max-height: 30rem;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .accordion-desc {
+      margin-left: 3rem;
+    }
+  }
+
+  &-desc {
+    font-size: 1.2rem;
+    line-height: 2;
+
+    margin-top: 1rem;
+  }
+
+  &-link,
+  a {
+    color: rgb(32, 162, 255);
+    text-decoration: none;
+  }
+}

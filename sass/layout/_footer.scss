@@ -1,0 +1,197 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 40rem;
+  padding: 0 4rem;
+
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+
+  * li {
+    display: block;
+    font-size: 1.4rem;
+    list-style: none;
+    padding: 1rem 0;
+    cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+    }
+
+    @include respond(phone-md) {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      color: rgb(20, 40, 160);
+      text-decoration: underline;
+    }
+  }
+
+  &-privacy {
+    grid-area: 1 / 1 / span 1 / span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    border-top: 1px solid $color-grey-light-3;
+
+    @include respond(phone) {
+      column-gap: 1rem;
+    }
+
+    @include respond(phone-md) {
+      display: none;
+    }
+
+    &--desc:nth-child(1) {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--link,
+    a {
+      color: $color-black;
+      font-weight: 600;
+      text-decoration: none;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid $color-black;
+      cursor: pointer;
+    }
+  }
+
+  &-column {
+    border-right: 1px solid $color-grey-light-3;
+    border-top: 1px solid $color-grey-light-3;
+    padding: 2rem;
+
+    @include respond(phone) {
+      padding: 0.5rem;
+    }
+
+    &--heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+      }
+
+      @include respond(phone-md) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--categories {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &-copyright {
+    grid-area: 3 / 1 / span 1 / span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    border-top: 1px solid $color-grey-light-3;
+
+    @include respond(phone) {
+      padding: 2rem 0;
+    }
+
+    &--image {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &-extra {
+    grid-area: 4 / 1 / span 1 / span 4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-top: 1px solid $color-grey-light-3;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      font-size: 1.2rem;
+    }
+
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 3rem;
+      padding: 2rem;
+
+      &:nth-child(1) {
+        @include respond(tab-port) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include respond(phone) {
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+    }
+
+    &--language {
+      font-weight: 600;
+      border-right: 2px solid $color-grey-light-3;
+      padding-right: 3rem;
+
+      @include respond(tab-port) {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 3rem;
+      }
+
+      @include respond(phone) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--terms {
+      li {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+
+          @include respond(phone) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    &--title {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--sns {
+      display: flex;
+      column-gap: 1rem;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}

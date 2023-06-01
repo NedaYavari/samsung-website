@@ -1,0 +1,148 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-swiper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+
+    @include respond(tab-port) {
+      padding: 0 2rem;
+    }
+
+    @include respond(phone) {
+      height: 130vh;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &-sidebar {
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &-box {
+    position: relative;
+    height: 6rem;
+    border-top: 1px solid transparent;
+    padding: 2rem 0;
+    overflow: hidden;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+
+    @include respond(tab-land) {
+      height: 8rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
+
+    &.active {
+      height: 14rem;
+      border-top: 1px solid $color-grey-dark-2;
+      overflow: visible;
+      transition: cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+
+      @include respond(phone) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-text {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &-number {
+    font-size: 2rem;
+  }
+
+  &-title {
+    font-size: 2.4rem;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &-link,
+  &-link:link {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-black;
+    margin-left: 4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      background-color: $color-black;
+      transform: scaleX(0);
+      transform-origin: 50% 50% 0;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transition: 0.3s;
+    }
+  }
+}
+
+.explore .heading {
+  position: relative;
+  margin-bottom: 5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: 50% 50% 0;
+    transition: 0.5s;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transition: 0.5s;
+  }
+}
